@@ -1,0 +1,24 @@
+SIGESC — REGISTRO DA VERIFICAÇÃO TÉCNICA
+Data de referência: 31/10/2026
+
+CAMADA DE DADOS
+Ferramenta: Python unittest, base SQLite temporária.
+Execução: python -m unittest discover -p "testar_*.py" -v
+Resultado: 10 testes realizados, 10 aprovados, OK.
+Testes: cadastro/consulta, busca, persistência, valores inválidos,
+campos vazios, ID inexistente, identificadores distintos, status e texto de pesquisa.
+
+INTERFACE GRÁFICA
+Ambiente: Python 3.13.5, Tkinter, Linux/Xvfb (exibição virtual).
+Teste 1: inicialização com 8 chamados fictícios — aprovado.
+Teste 2: pesquisa por PC-05 (1 chamado) — aprovado.
+Teste 3: filtro 'Concluído' (2 chamados) — aprovado.
+Teste 4: remoção de filtros (8 chamados) — aprovado.
+Teste 5: registro de novo chamado em cópia temporária — aprovado.
+Teste 6: alteração do status desse registro — aprovado.
+Teste 7: exportação dos dados para CSV em cópia temporária — aprovado.
+Tela registrada em ../IMAGENS/tela_sigesc.png.
+
+LIMITES
+A aprovação desses testes não certifica a ausência total de defeitos.
+O funcionamento em Windows e a implantação em escola real não foram verificados.
